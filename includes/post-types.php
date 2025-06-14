@@ -1,16 +1,13 @@
 <?php
-function qb_register_quiz_post_type() {
-    register_post_type('quiz', [
+add_action('init', function () {
+    register_post_type('qb_quiz', [
         'labels' => [
             'name' => 'Квізи',
-            'singular_name' => 'Квіз',
+            'singular_name' => 'Квіз'
         ],
         'public' => true,
-        'has_archive' => true,
-        'rewrite' => ['slug' => 'quizzes'],
-        'menu_position' => 5,
+        'has_archive' => false,
         'supports' => ['title'],
+        'menu_icon' => 'dashicons-welcome-learn-more'
     ]);
-}
-add_action('init', 'qb_register_quiz_post_type');
-?>
+});

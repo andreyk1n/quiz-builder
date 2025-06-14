@@ -1,14 +1,16 @@
-.qb-quiz {
-    border: 1px solid #ccc;
-    padding: 20px;
-    max-width: 600px;
+.qb-answer {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
 }
-.qb-question {
-    margin-bottom: 20px;
+.qb-answer.correct {
+  background-color: #c8f7c5;
 }
-.qb-submit {
-    background: #0073aa;
-    color: #fff;
-    padding: 10px 20px;
-    cursor: pointer;
+.qb-answer.uncorrect {
+  background-color: #f8c8c8;
+}
+.qb-result {
+  font-weight: bold;
+  margin-top: 20px;
 }
